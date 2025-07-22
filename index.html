@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Search</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ✅ Google Analytics (নিজের মাপ ID বসান G-XXXXXXXXXX) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">🖼️ ImageFinder</div>
+    <button class="menu-btn">☰</button>
+  </header>
+
+  <!-- Search Bar Box -->
+  <div class="search-box">
+    <select id="apiSelector">
+      <option value="google">G</option>
+      <option value="unsplash">U</option>
+     
+    </select>
+    <input type="text" id="searchInput" placeholder="Search Images...">
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <!-- Grid View -->
+  <div id="imageGrid" class="grid">
+    <!-- ✅ এখানে ইমেজ গুলো আসবে script.js থেকে -->
+
+    <!-- ✅ (কমেন্ট করা Native Ad ব্লক) -->
+    <!--
+    <div class="native-ad">
+      <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-format="fluid"
+        data-ad-layout-key="-fg+5n+6t-e7+md"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+        data-ad-slot="YYYYYYYYYY"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    -->
+  </div>
+
+  <!-- Load More -->
+  <button id="loadMoreBtn" class="load-more" style="display:none;">Load More</button>
+
+  <!-- ✅ (কমেন্ট করা Banner Ad নিচে) -->
+  <!--
+  <div class="banner-ad">
+    <script async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
+      crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+      data-ad-slot="ZZZZZZZZZZ"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  -->
+
+  <script src="script.js"></script>
+</body>
+</html>
