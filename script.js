@@ -6,7 +6,7 @@ const GOOGLE_KEY = "AIzaSyC9Z8cVk0jvJkGW7NjieCx8C8zSjXUmhnE";
 
 let page = 1;
 let query = "";
-let selectedAPI = "unsplash";
+let selectedAPI = "google";
 
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
