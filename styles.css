@@ -9,15 +9,27 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
-  color: #000;
-  padding: 8px 15px;
-  border-bottom: 1px solid #ddd;
+  background: #ffffff;
+  padding: 12px 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo::before {
+  content: "✨";
+  font-size: 1.4rem;
 }
 
 .menu-btn {
@@ -36,6 +48,8 @@ body {
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
+   padding: 0 3px; /* দুই পাশে 10px
+   খালি জায়গা */
 }
 
 .search-box select {
@@ -96,5 +110,66 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
+/**/
 
 
+
+
+/* ড্রয়ার স্টাইল */
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100%;
+  background: #fff;
+  z-index: 101;
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.drawer.open {
+  left: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.drawer-content {
+  padding: 15px;
+}
+
+.drawer-item {
+  display: block;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.drawer-item:hover {
+  color: #0077ff;
+}

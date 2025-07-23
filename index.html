@@ -12,12 +12,13 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-6ZH3BQP55V);
+    gtag('config', 'G-6ZH3BQP55V');
   </script>
 </head>
 <body>
+  
   <header class="topbar">
-    <div class="logo">🖼️ ImageFinder</div>
+    <div class="logo">PiCJK</div>
     <button class="menu-btn">☰</button>
   </header>
 
@@ -25,19 +26,69 @@
   <div class="search-box">
     <select id="apiSelector">
       <option value="google">G</option>
-      <option value="unsplash">U</option>
-     
+      <option value="unsplash">U</option> 
     </select>
     <input type="text" id="searchInput" placeholder="Search Images...">
     <button id="searchBtn">Search</button>
   </div>
-
+  
+<!-- Updated Sidebar/Drawer with PPC Ads and Links -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <h3>Menu</h3>
+    <button class="close-btn" id="closeDrawerBtn">×</button>
+  </div>
+  
+  <div class="drawer-content">
+    <!-- Navigation Links -->
+    <a href="index.html" class="drawer-item active">
+      <i class="fas fa-home"></i> Home
+    </a>
+    <a href="trending.html" class="drawer-item">
+      <i class="fas fa-chart-line"></i> Trending
+    </a>
+    <a href="categories.html" class="drawer-item">
+      <i class="fas fa-folder"></i> Categories
+    </a>
+    
+    <!-- PPC Ad Section -->
+    <div class="drawer-ad">
+      <h4>Sponsored</h4>
+      <div class="ad-container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
+          crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+          data-ad-slot="YYYYYYYYYY"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+    
+    <!-- More Links 
+    <a href="settings.html" class="drawer-item">
+      <i class="fas fa-cog"></i> Settings
+    </a>
+    -->
+    <a href="privacy.html" class="drawer-item">
+      <i class="fas fa-shield-alt"></i> Privacy Policy
+    </a>
+    <a href="contact.html" class="drawer-item">
+      <i class="fas fa-envelope"></i> Contact Us
+    </a>
+  </div>
+</div>
   <!-- Grid View -->
   <div id="imageGrid" class="grid">
     <!-- ✅ এখানে ইমেজ গুলো আসবে script.js থেকে -->
 
     <!-- ✅ (কমেন্ট করা Native Ad ব্লক) -->
-    <!--
+    <!---
     <div class="native-ad">
       <script async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
@@ -52,11 +103,13 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
-    -->
+ -->
   </div>
 
   <!-- Load More -->
   <button id="loadMoreBtn" class="load-more" style="display:none;">Load More</button>
+  
+  
 
   <!-- ✅ (কমেন্ট করা Banner Ad নিচে) -->
   <!--
@@ -74,8 +127,13 @@
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-  -->
+  --->
 
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+

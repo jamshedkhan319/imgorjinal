@@ -1,7 +1,7 @@
 // === আপনার API Key গুলো এখানে বসান ===
 const UNSPLASH_KEY = "YOs2WDmFEzBckaZcpIfErIeWRqvL1PvUpIKlCbWKseU";
-const GOOGLE_CX = "62384ed4a547c4614";
-const GOOGLE_KEY = "AIzaSyC9Z8cVk0jvJkGW7NjieCx8C8zSjXUmhnE";
+const GOOGLE_CX = "b410842919d994fb4";
+const GOOGLE_KEY = "AIzaSyAjHuOdeXJG5xrR4X43EbUFpRUJpD7fcdU";
 // =======================================
 
 let page = 1;
@@ -51,7 +51,7 @@ async function fetchImages() {
       images = (data.results || []).map(img => img.urls?.small).filter(Boolean);
     } else if (selectedAPI === "google") {
       if (!data.items) {
-        if (page === 1) imageGrid.innerHTML = "<p>No images found!</p>";
+        if (page === 1) imageGrid.innerHTML = "<p>Image limit reached please wait, or select' U </p>";
         return;
       }
       images = data.items.map(item => item.link).filter(Boolean);
@@ -93,3 +93,49 @@ function openViewPage(src) {
   localStorage.setItem("selectedImageURL", src);
   window.location.href = "download.html";
 }
+
+// ডয়ার কোড*********
+// Enhanced Drawer Control with Ad Loading
+const menuBtn = document.querySelector('.menu-btn');
+const drawer = document.getElementById('drawer');
+const drawerOverlay = document.getElementById('drawerOverlay');
+const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+
+// Open drawer function
+function openDrawer() {
+  drawer.classList.add('open');
+  drawerOverlay.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  
+  // Load ads when drawer opens
+  loadDrawerAds();
+}
+
+// Close drawer function
+function closeDrawer() {
+  drawer.classList.remove('open');
+  drawerOverlay.style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// Function to load ads
+function loadDrawerAds() {
+  // Check if ads are already loaded
+  if (!document.querySelector('.drawer-ad .adsbygoogle')) {
+    setTimeout(() => {
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    }, 300);
+  }
+}
+
+// Event listeners
+menuBtn.addEventListener('click', openDrawer);
+closeDrawerBtn.addEventListener('click', closeDrawer);
+drawerOverlay.addEventListener('click', closeDrawer);
+
+// Close drawer when clicking outside
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && drawer.classList.contains('open')) {
+    closeDrawer();
+  }
+});
