@@ -1,7 +1,4 @@
-// === API Key গুলো ===
-const UNSPLASH_KEY = "YOs2WDmFEzBckaZcpIfErIeWRqvL1PvUpIKlCbWKseU";
-const GOOGLE_CX = "62384ed4a547c4614";
-const GOOGLE_KEY = "AIzaSyC9Z8cVk0jvJkGW7NjieCx8C8zSjXUmhnE";
+= "AIzaSyC9Z8cVk0jvJkGW7NjieCx8C8zSjXUmhnE";
 
 let page = 1;
 let query = "";
