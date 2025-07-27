@@ -1,4 +1,4 @@
-= "AIzaSyC9Z8cVk0jvJkGW7NjieCx8C8zSjXUmhnE";
+
 
 let page = 1;
 let query = "";
